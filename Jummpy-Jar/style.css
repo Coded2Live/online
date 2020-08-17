@@ -1,0 +1,152 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    background-color: rgba(255, 255, 255, 0.329);
+}
+#game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    position: relative;
+    left: 10%;
+    top: 50px;
+    
+    pointer-events: none;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    border-radius: 40%;
+    background-color: rgba(255, 81, 0, 0.829);
+    position:relative;
+    top: 150px;
+    left: 30px;
+}
+#start{
+    width: 490px;
+    height: 10px;
+    position: relative;
+    left: 10%;
+    top: 60px;
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 14px;
+    border-radius: 5px;
+}
+#button{
+    cursor: pointer;
+}
+.on{
+    background-color: green;
+}
+.off{
+    background-color: red;
+}
+.animation{
+    animation: jump 0.5s;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+#block{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 480px;
+    top: 130px;
+    border-radius: 100%;
+    background: linear-gradient(blue,gold);
+}
+.blockin {
+    animation: block 1.5s infinite linear;
+    }
+
+@keyframes block{
+    0%{left: 480px; transform: rotate(0deg);}
+    100%{left: -2px;transform: rotate(-360deg);}
+
+}
+.texts{
+    display: none;
+}
+#head{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border-radius: 100%;
+    background-color:rgb(255, 123, 0);
+    background: linear-gradient(black,rgb(255, 123, 0),rgb(255, 123, 0));
+    left: 30px;
+    top: 60px;
+}
+.headmov{
+    animation: headjump 0.5s;
+}
+@keyframes headjump{
+    0%{top: 60px;}
+    30%{top: 10px;}
+    70%{top: 10px;}
+    100%{top: 60px;}
+}
+#disp{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    position: absolute;
+    color: blueviolet;
+    top: -5px;
+    left: 230px;
+    text-decoration-color: rebeccapurple;
+    text-align: center;
+    font: 1em sans-serif;
+    font-size: 50px;
+}
+#lhand, #rhand{
+    width: 30px;
+    height: 7px;
+    background-color: rgb(255, 123, 0);
+    border-radius: 40%;
+    position: relative;
+    left: 36px;
+    top: 60px;
+    offset-rotate: 0deg;
+    border: black;
+    border-color: black;
+    border-start-end-radius: 5%;
+
+}
+#lhand{
+    border: black !important;
+    box-shadow: black;
+}
+@keyframes lhanda{
+    0%{top: 60px; transform : rotatez(0deg);left: 36px;}
+    30%{top: 30px;transform : rotatez(90deg);left: 30px;}
+    70%{top: 30px;transform : rotatez(90deg);left: 30px;}
+    100%{top: 60px;transform : rotatez(0deg);left: 36px;}
+}
+.lhands{
+    animation: lhanda 0.5s;
+}
+@keyframes screen{
+    0%{background:linear-gradien(blue,cyan,cyan)};
+    30%{background:linear-gradient(blue,blue,cyan)};
+    70%{background:linear-gradient(blue,blue,cyan)};
+    100%{background:linear-gradient(blue,cyan,cyan)};
+}
+
+@keyframes rotates{
+    0%{transform: rotate(0deg);}
+    10%{transform: rotate(180deg);}
+    100%{transform: rotate(720deg);}
+}
+
+.screens{
+    animation: screen 1.5s infinite linear ;
+}
+.finish{
+        animation: rotates 1s 1 ease-out;
+}
